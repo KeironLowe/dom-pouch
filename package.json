@@ -1,0 +1,31 @@
+{
+  "name": "dom-suite",
+  "version": "0.0.1",
+  "description": "A suite of helper methods for dealing with the DOM",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KeironLowe/dom-suite.git"
+  },
+  "author": "Keiron Lowe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KeironLowe/dom-suite/issues"
+  },
+  "homepage": "https://github.com/KeironLowe/dom-suite#readme",
+  "devDependencies": {
+    "rollup": "^1.29.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "typescript": "^3.7.4"
+  }
+}
