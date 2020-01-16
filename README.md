@@ -1,20 +1,20 @@
-# Dom Suite
+# Dom Pouch
 
-Dom Suite provides a variety of helper methods written in TypeScript for interacting with the DOM and reducing the amount of code needed to perform simple tasks.
+Dom Pouch provides a variety of helper methods written in TypeScript for interacting with the DOM and reducing the amount of code needed to perform simple tasks.
 
 ## Installation
 ```
 // Yarn
-yarn add dom-suite
+yarn add dom-pouch
 
 // NPM
-npm install dom-suite
+npm install dom-pouch
 ```
 
 ## Usage
 Just import the methods you need
 ```
-import { findFirst } from 'dom-suite';
+import { findFirst } from 'dom-pouch';
 ```
 
 ## Methods

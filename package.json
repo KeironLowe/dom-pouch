@@ -1,7 +1,7 @@
 {
-  "name": "dom-suite",
+  "name": "dom-pouch",
   "version": "0.0.1",
-  "description": "A suite of helper methods for dealing with the DOM",
+  "description": "A pouch of helper methods for dealing with the DOM",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
   "files": [
@@ -15,14 +15,14 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KeironLowe/dom-suite.git"
+    "url": "git+https://github.com/KeironLowe/dom-pouch.git"
   },
   "author": "Keiron Lowe",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/KeironLowe/dom-suite/issues"
+    "url": "https://github.com/KeironLowe/dom-pouch/issues"
   },
-  "homepage": "https://github.com/KeironLowe/dom-suite#readme",
+  "homepage": "https://github.com/KeironLowe/dom-pouch#readme",
   "devDependencies": {
     "rollup": "^1.29.0",
     "rollup-plugin-typescript2": "^0.25.3",
