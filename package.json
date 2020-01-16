@@ -1,6 +1,6 @@
 {
   "name": "dom-pouch",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A pouch of helper methods for dealing with the DOM",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
