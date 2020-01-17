@@ -31,19 +31,19 @@ Returns the first element which matches the selector string.
 
 ### Attributes
 
-#### `getAttr(element: HTMLElement, attribute: string): string | null`
+#### `getAttr(element: Element, attribute: string): string | null`
 Returns the value of an attribute for the element.
 
-#### `setAttr(element: HTMLElement, attribute: string, value: string): void`
+#### `setAttr(element: Element, attribute: string, value: string): void`
 Sets the value of an attribute for the element.
 
-#### `setDataAttr(element: HTMLElement, attribute: string, value: string): void`
+#### `setDataAttr(element: HTMLElement | SVGElement, attribute: string, value: string): void`
 Sets the value of a data attribute for the element.
 
-#### `getDataAttr(element: HTMLElement, attribute: string): string | null`
+#### `getDataAttr(element: HTMLElement | SVGElement, attribute: string): string | null`
 Returns the value of a data attribute for the element.
 
-#### `toggleAttrVal(element: HTMLElement, attribute: string, valueOne: string, valueTwo: string): void`
+#### `toggleAttrVal(element: Element, attribute: string, valueOne: string, valueTwo: string): void`
 Toggles an attribute between two values for the element.
 
 ---

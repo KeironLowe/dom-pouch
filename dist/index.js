@@ -98,7 +98,7 @@ function findFirst(selector, context) {
  * Returns the value of an attribute for the element.
  *
  * @export
- * @param {HTMLElement} element
+ * @param {Element} element
  * @param {string} attribute
  * @returns {(string | null)}
  */
@@ -110,7 +110,7 @@ function getAttr(element, attribute) {
  * Sets the value of an attribute for the element.
  *
  * @export
- * @param {HTMLElement} element
+ * @param {Element} element
  * @param {string} attribute
  * @param {string} value
  */
@@ -121,7 +121,7 @@ function setAttr(element, attribute, value) {
  * Sets the value of a data attribute for the element.
  *
  * @export
- * @param {HTMLElement} element
+ * @param {HTMLElement | SVGElement} element
  * @param {string} attribute
  * @param {string} value
  */
@@ -132,7 +132,7 @@ function setDataAttr(element, attribute, value) {
  * Returns the value of a data attribute for the element.
  *
  * @export
- * @param {HTMLElement} element
+ * @param {HTMLElement | SVGElement} element
  * @param {string} attribute
  * @returns {(string | null)}
  */
@@ -144,7 +144,7 @@ function getDataAttr(element, attribute) {
  * Toggles an attribute between two values for the element.
  *
  * @export
- * @param {HTMLElement} element
+ * @param {Element} element
  * @param {string} attribute
  * @param {string} valueOne
  * @param {string} valueTwo
