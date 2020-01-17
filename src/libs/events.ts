@@ -52,3 +52,22 @@ export function listen<T extends HTMLElement>(elements: T | T[], events: string 
     [elements, events] = prepareData(elements, events);
     setListeners(elements, events, callback);
 }
+
+
+/**
+ * Creates an event which is compatible with IE11
+ *
+ * @export
+ * @param {string} eventName
+ * @returns {Event}
+ */
+export function createEvent(eventName: string): Event {
+    let event;
+    if (typeof(Event) === 'function') {
+        event = new Event(eventName);
+    } else {
+        event = document.createEvent('Event');
+        event.initEvent(eventName, true, true);
+    }
+    return event;
+}

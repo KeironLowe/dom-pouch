@@ -48,7 +48,7 @@ Toggles an attribute between two values for the element.
 
 ---
 
-### Event Listeners
+### Events
 
 #### `listen<T extends HTMLElement>(elements: T | T[], events: string | string[], callback: (element: T, event: Event) => void): void`
 Simple way of binding multiple events to multiple elements. Both elements and events accept either a single item or an array of items. The callback method passes the element as the first argument followed by the event object. By defualt, the passed element in the callback has the type of HTMLElement, but this can be changed by passing a type variable, e.g...
@@ -58,3 +58,6 @@ listen<HTMLFormElement>(forms, 'submit', (form, event) => {
     // The form argument is of type HTMLFormElement
 });
 ```
+
+#### `createEvent(eventName: string): Event`
+Creates a new event which is compatible with IE11
