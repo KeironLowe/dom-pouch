@@ -2,9 +2,9 @@
  * Loops through the elements and events and binds them.
  *
  * @template T
- * @param {T[]} elements
+ * @param {ListenerElements<T>[]} elements
  * @param {string[]} events
- * @param {(element: T, event: Event) => void} callback
+ * @param {(element: ListenerElements<T>, event: Event) => void} callback
  */
 function setListeners(elements, events, callback) {
     elements.forEach(function (element) {
@@ -17,9 +17,9 @@ function setListeners(elements, events, callback) {
  * Prepares the data for easier use, converts single values into arrays
  *
  * @template T
- * @param {(T | T[])} elements
+ * @param {(ListenerElements<T> | ListenerElements<T>[])} elements
  * @param {(string | string[])} events
- * @returns {[T[], string[]]}
+ * @returns {[ListenerElements<T>[], string[]]}
  */
 function prepareData(elements, events) {
     // If the element isn't an array, add it to one for each of use later
@@ -37,9 +37,9 @@ function prepareData(elements, events) {
  *
  * @export
  * @template T
- * @param {(T | T[])} elements
+ * @param {(ListenerElements<T> | ListenerElements<T>[])} elements
  * @param {(string | string[])} events
- * @param {(element: T, event: Event) => void} callback
+ * @param {(element: ListenerElements<T>, event: Event) => void} callback
  */
 function listen(elements, events, callback) {
     var _a;

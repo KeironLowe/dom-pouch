@@ -1,12 +1,15 @@
+type ListenerElements<T> = Window | Document | T;
+
+
 /**
  * Loops through the elements and events and binds them.
  *
  * @template T
- * @param {T[]} elements
+ * @param {ListenerElements<T>[]} elements
  * @param {string[]} events
- * @param {(element: T, event: Event) => void} callback
+ * @param {(element: ListenerElements<T>, event: Event) => void} callback
  */
-function setListeners<T extends Element>(elements: T[], events: string[], callback: (element: T, event: Event) => void): void {
+function setListeners<T extends Element>(elements: ListenerElements<T>[], events: string[], callback: (element: ListenerElements<T>, event: Event) => void): void {
     elements.forEach(element => {
         events.forEach(event => {
             element.addEventListener(event, event => callback(element, event));
@@ -19,11 +22,11 @@ function setListeners<T extends Element>(elements: T[], events: string[], callba
  * Prepares the data for easier use, converts single values into arrays
  *
  * @template T
- * @param {(T | T[])} elements
+ * @param {(ListenerElements<T> | ListenerElements<T>[])} elements
  * @param {(string | string[])} events
- * @returns {[T[], string[]]}
+ * @returns {[ListenerElements<T>[], string[]]}
  */
-function prepareData<T extends Element>(elements: T | T[], events: string | string[]): [T[], string[]] {
+function prepareData<T extends Element>(elements: ListenerElements<T> | ListenerElements<T>[], events: string | string[]): [ListenerElements<T>[], string[]] {
 
     // If the element isn't an array, add it to one for each of use later
     if(!Array.isArray(elements)) {
@@ -44,11 +47,11 @@ function prepareData<T extends Element>(elements: T | T[], events: string | stri
  *
  * @export
  * @template T
- * @param {(T | T[])} elements
+ * @param {(ListenerElements<T> | ListenerElements<T>[])} elements
  * @param {(string | string[])} events
- * @param {(element: T, event: Event) => void} callback
+ * @param {(element: ListenerElements<T>, event: Event) => void} callback
  */
-export function listen<T extends HTMLElement>(elements: T | T[], events: string | string[], callback: (element: T, event: Event) => void): void {
+export function listen<T extends HTMLElement>(elements: ListenerElements<T> | ListenerElements<T>[], events: string | string[], callback: (element: ListenerElements<T>, event: Event) => void): void {
     [elements, events] = prepareData(elements, events);
     setListeners(elements, events, callback);
 }
