@@ -154,4 +154,62 @@ function toggleAttrVal(element, attribute, valueOne, valueTwo) {
     }
 }
 
-export { createEvent, find, findFirst, getAttr, getDataAttr, listen, setAttr, setDataAttr, toggleAttrVal };
+/**
+ * Removes an element from the DOM
+ *
+ * @export
+ * @param {Element} element
+ */
+function removeElement(element) {
+    var parent = element.parentNode;
+    if (parent)
+        parent.removeChild(element);
+}
+/**
+ * Inserts the element after the reference element.
+ *
+ * @export
+ * @param {Element} elementToInsert
+ * @param {Element} referenceElement
+ */
+function insertAfter(elementToInsert, referenceElement) {
+    var parent = referenceElement.parentNode;
+    if (parent)
+        parent.insertBefore(elementToInsert, referenceElement.nextSibling);
+}
+/**
+ * Inserts the element before the reference element
+ *
+ * @export
+ * @param {Element} elementToInsert
+ * @param {Element} referenceElement
+ */
+function insertBefore(elementToInsert, referenceElement) {
+    var parent = referenceElement.parentNode;
+    if (parent)
+        parent.insertBefore(elementToInsert, referenceElement);
+}
+/**
+ * Add's an element to the start of the parentElement
+ *
+ * @export
+ * @param {Element} elementToInsert
+ * @param {Element} parentElement
+ */
+function prependElement(elementToInsert, parentElement) {
+    if (parentElement)
+        parentElement.insertBefore(elementToInsert, parentElement.firstElementChild);
+}
+/**
+ * Add's an element to the end of the parentElement
+ *
+ * @export
+ * @param {Element} elementToInsert
+ * @param {Element} parentElement
+ */
+function appendElement(elementToInsert, parentElement) {
+    if (parentElement)
+        parentElement.appendChild(elementToInsert);
+}
+
+export { appendElement, createEvent, find, findFirst, getAttr, getDataAttr, insertAfter, insertBefore, listen, prependElement, removeElement, setAttr, setDataAttr, toggleAttrVal };

@@ -61,3 +61,23 @@ listen<HTMLFormElement>(forms, 'submit', (form, event) => {
 
 #### `createEvent(eventName: string): Event`
 Creates a new event which is compatible with IE11
+
+
+---
+
+### Traversing
+
+#### `removeElement(element: Element): void`
+Removes an element from the DOM
+
+#### `insertAfter(elementToInsert: Element, referenceElement: Element): void`
+Inserts an element after the reference element
+
+#### `insertBefore(elementToInsert: Element, referenceElement: Element): void`
+Inserts an element before the reference element
+
+#### `prependElement(elementToInsert: Element, parentElement: Element): void`
+Add's an element to the beginning of the parent element
+
+#### `appendElement(elementToInsert: Element, parentElement: Element): void`
+Add's an element to the end of the parent element
