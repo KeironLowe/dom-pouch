@@ -50,6 +50,24 @@ function listen(elements, events, callback) {
     _a = prepareData(elements, events), elements = _a[0], events = _a[1];
     setListeners(elements, events, callback);
 }
+/**
+ * Creates an event which is compatible with IE11
+ *
+ * @export
+ * @param {string} eventName
+ * @returns {Event}
+ */
+function createEvent(eventName) {
+    var event;
+    if (typeof (Event) === 'function') {
+        event = new Event(eventName);
+    }
+    else {
+        event = document.createEvent('Event');
+        event.initEvent(eventName, true, true);
+    }
+    return event;
+}
 
 /**
  * Returns all elements which match the selector.
@@ -140,6 +158,7 @@ function toggleAttrVal(element, attribute, valueOne, valueTwo) {
     }
 }
 
+exports.createEvent = createEvent;
 exports.find = find;
 exports.findFirst = findFirst;
 exports.getAttr = getAttr;
