@@ -3,10 +3,10 @@
  *
  * @export
  * @param {string} selector
- * @param {(Document | HTMLElement)} [context=document]
- * @returns {HTMLElement}
+ * @param {(Document | Element)} [context=document]
+ * @returns {Element}
  */
-export function find(selector: string, context: Document | HTMLElement = document): HTMLElement[] {
+export function find(selector: string, context: Document | Element = document): Element[] {
     return Array.from(context.querySelectorAll(selector));
 }
 
@@ -16,9 +16,9 @@ export function find(selector: string, context: Document | HTMLElement = documen
  *
  * @export
  * @param {string} selector
- * @param {(Document | HTMLElement)} [context=document]
- * @returns {HTMLElement}
+ * @param {(Document | Element)} [context=document]
+ * @returns {Element}
  */
-export function findFirst(selector: string, context: Document | HTMLElement = document): HTMLElement {
+export function findFirst(selector: string, context: Document | Element = document): Element {
     return context.querySelector(selector);
 }

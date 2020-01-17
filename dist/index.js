@@ -74,8 +74,8 @@ function createEvent(eventName) {
  *
  * @export
  * @param {string} selector
- * @param {(Document | HTMLElement)} [context=document]
- * @returns {HTMLElement}
+ * @param {(Document | Element)} [context=document]
+ * @returns {Element}
  */
 function find(selector, context) {
     if (context === void 0) { context = document; }
@@ -86,8 +86,8 @@ function find(selector, context) {
  *
  * @export
  * @param {string} selector
- * @param {(Document | HTMLElement)} [context=document]
- * @returns {HTMLElement}
+ * @param {(Document | Element)} [context=document]
+ * @returns {Element}
  */
 function findFirst(selector, context) {
     if (context === void 0) { context = document; }

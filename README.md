@@ -21,10 +21,10 @@ import { findFirst } from 'dom-pouch';
 
 ### Selectors
 
-#### `find(selector: string, context: Document | HTMLElement = document): HTMLElement[]`
+#### `find(selector: stering, context: Document | Element = document): Element[]`
 Returns an array of all elements which match the selector string.
 
-#### `findFirst(selector: string, context: Document | HTMLElement = document): HTMLElement`
+#### `findFirst(selector: string, context: Document | Element = document): Element`
 Returns the first element which matches the selector string.
 
 ---

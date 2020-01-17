@@ -3,16 +3,16 @@
  *
  * @export
  * @param {string} selector
- * @param {(Document | HTMLElement)} [context=document]
- * @returns {HTMLElement}
+ * @param {(Document | Element)} [context=document]
+ * @returns {Element}
  */
-export declare function find(selector: string, context?: Document | HTMLElement): HTMLElement[];
+export declare function find(selector: string, context?: Document | Element): Element[];
 /**
  * Returns the first element which matches the selector.
  *
  * @export
  * @param {string} selector
- * @param {(Document | HTMLElement)} [context=document]
- * @returns {HTMLElement}
+ * @param {(Document | Element)} [context=document]
+ * @returns {Element}
  */
-export declare function findFirst(selector: string, context?: Document | HTMLElement): HTMLElement;
+export declare function findFirst(selector: string, context?: Document | Element): Element;
